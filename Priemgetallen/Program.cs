@@ -8,27 +8,52 @@ namespace Priemgetallen
         {
             int[] primeNumbers = new int[100];
 
-            for (int i = 0; i < 100; i++)
+            // testje of methode werkt.
+            //int number = 7;
+
+            //bool isValid = IsPrimeNumber(number);
+            //Console.WriteLine(isValid ? $"{number} is een priemgetal." : $"{number} is geen priemgetal.");
+
+            int index = 0;
+            for (int i = 2; primeNumbers[99] == 0; i++)
+            {                
+                bool isPrimeNumber = IsPrimeNumber(i);
+                if (isPrimeNumber)
                 {
-              // code toevoegen om eerste 100 priemgetallen te verkrijgen
+                    primeNumbers[index] = i;
+                    index += 1;
+                }
+            }  
+            
+           for (int i = 1; i <= primeNumbers.Length; i++)
+            {
+                Console.Write($"{primeNumbers[i-1]}  ");
+                if (i%10 == 0)
+                {
+                    Console.WriteLine();
+                }
             }
-                        
+            
         }
 
         public static bool IsPrimeNumber(int number)
         {
-            if (number == 0 || number == 1)
+            if (number <= 1)
                 {
                 return false;
-            }
+                }
+
+            int modulus = 1;
             
-            for (int i = 1; i <= (number / 2); i++)
+            for (int i = 2; i <= (number / 2); i++)
             {
-                if (number != i && number % i == 0)
+                modulus = number % i;
+                if (modulus == 0)
                 {
-                    return false;                    
-                }                
+                    return false;
+                }
             }
+
             return true;
         }
     }

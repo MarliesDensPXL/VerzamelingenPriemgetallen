@@ -34,7 +34,7 @@ namespace Priemgetallen
             
            for (int i = 1; i <= primeNumbers.Length; i++)
             {
-                Console.Write($"{primeNumbers[i-1], 5}");
+                Console.Write($"{primeNumbers[i-1], 5}"); // @Wim: ik vermoed dat ik die '5' hier moet vervangen door de lengte maar dat geeft errors.
                 if (i%10 == 0)
                 {
                     Console.WriteLine();

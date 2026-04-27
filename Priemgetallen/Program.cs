@@ -23,11 +23,18 @@ namespace Priemgetallen
                     primeNumbers[index] = i;
                     index += 1;
                 }
-            }  
+            }
+
+            // lengte langste priemgetal bepalen om uitlijning te bepalen -> hoe kan ik dit getal gebruiken? 
+            int length = primeNumbers[99].ToString().Length;
+            
+
+            Console.WriteLine("Dit zijn de eerste honderd priemgetallen: ");
+            Console.WriteLine();
             
            for (int i = 1; i <= primeNumbers.Length; i++)
             {
-                Console.Write($"{primeNumbers[i-1]}  ");
+                Console.Write($"{primeNumbers[i-1], 5}");
                 if (i%10 == 0)
                 {
                     Console.WriteLine();

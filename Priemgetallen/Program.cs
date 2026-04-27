@@ -25,7 +25,7 @@ namespace Priemgetallen
                 }
             }
 
-            // lengte langste priemgetal bepalen om uitlijning te bepalen -> hoe kan ik dit getal gebruiken? 
+            // lengte langste priemgetal bepalen om uitlijning te bepalen -> @Wim: is het de bedoeling dat ik hiermee iets doe? Want dat krijg ik niet op de wereld. 
             int length = primeNumbers[99].ToString().Length;
             
 
